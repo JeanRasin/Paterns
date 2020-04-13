@@ -1,5 +1,6 @@
 ﻿using Patterns.BehavioralPatterns.TemplateMethod;
 using Patterns.CreationalPatterns.FactoryMethod;
+using Patterns.StructuralPatterns.Adapter;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,6 +11,7 @@ namespace Patterns
     {
         private static void Main(string[] args)
         {
+            // Factory Method
             // ------------------- Develop
             Console.WriteLine("------------------- Develop");
 
@@ -79,6 +81,7 @@ namespace Patterns
 
             //Console.ReadLine();
 
+            // Template method
             // ------------------- Pie
             Console.WriteLine("------------------- Pie");
 
@@ -95,6 +98,8 @@ namespace Patterns
             applePie.Cook();
             // Console.ReadLine();
 
+            Console.WriteLine("------------------- School");
+
             School school = new School();
             University university = new University();
             College college = new College();
@@ -102,6 +107,28 @@ namespace Patterns
             school.Learn();
             university.Learn();
             college.Learn();
+
+            // Adapter
+            // ------------------- Travel
+            Console.WriteLine("------------------- Travel");
+
+            // Путешественник
+            Driver driver = new Driver();
+
+            // Машина
+            Auto auto = new Auto();
+
+            // Отправляемся в путешествие
+            driver.Travel(auto);
+
+            // Встретились пески, надо использовать верблюда
+            Camel camel = new Camel();
+
+            // Используем адаптер
+            ITransport camelToTransportAdapter = new CamelToTransportAdapter(camel);
+
+            // Продолжаем путь по пескам пустыни
+            driver.Travel(camelToTransportAdapter);
         }
     }
 }
