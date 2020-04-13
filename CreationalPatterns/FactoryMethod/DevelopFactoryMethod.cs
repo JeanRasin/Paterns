@@ -1,13 +1,6 @@
-﻿/*
- * https://metanit.com/sharp/patterns/2.1.php
- * https://bool.dev/blog/detail/porozhdayushchie-patterny-fabrichnyy-metod
- * https://shwanoff.ru/factory-method
- * https://refactoring.guru/ru/design-patterns/factory-method/csharp/example
- */
+﻿using System;
 
-using System;
-
-namespace Patterns.FactoryMethod
+namespace Patterns.CreationalPatterns.FactoryMethod
 {
     /// <summary>
     /// Product - house

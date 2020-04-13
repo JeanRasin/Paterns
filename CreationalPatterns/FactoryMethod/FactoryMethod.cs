@@ -1,8 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿/*
+ * https://metanit.com/sharp/patterns/2.1.php
+ * https://bool.dev/blog/detail/porozhdayushchie-patterny-fabrichnyy-metod
+ * https://shwanoff.ru/factory-method
+ * https://refactoring.guru/ru/design-patterns/factory-method/csharp/example
+ */
 
-namespace Patterns.FactoryMethod
+
+namespace Patterns.CreationalPatterns.FactoryMethod
 {
     public abstract class Product
     {

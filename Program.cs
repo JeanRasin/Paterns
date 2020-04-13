@@ -1,4 +1,5 @@
-﻿using Patterns.FactoryMethod;
+﻿using Patterns.BehavioralPatterns.TemplateMethod;
+using Patterns.CreationalPatterns.FactoryMethod;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,7 +10,8 @@ namespace Patterns
     {
         static void Main(string[] args)
         {
-            // Develop 
+            // ------------------- Develop 
+            Console.WriteLine("------------------- Develop");
 
             Developer dev1 = new DeveloperPanel("ООО ПанельСтрой");
             House house1 = dev1.Create();
@@ -29,13 +31,14 @@ namespace Patterns
                 new DeveloperBrick("ООО КирпичСтрой")
             };
 
-            foreach(var dev in developArray)
+            foreach (var dev in developArray)
             {
                 dev.Create();
             }
 
 
-            // Money
+            // ------------------- Money
+            Console.WriteLine("------------------- Money");
 
             // Устанавливаем кодировку чтобы корректно отобразился символ рубля.
             Console.OutputEncoding = Encoding.Unicode;
@@ -75,6 +78,22 @@ namespace Patterns
                 Console.WriteLine(note);
             }
 
+            //Console.ReadLine();
+
+            // ------------------- Pie
+            Console.WriteLine("------------------- Pie");
+
+            PieBase applePie = new ApplePie();
+            PieBase meatPie = new MeatPie();
+
+            // Готовим мясной пирог.
+            Console.WriteLine(meatPie);
+            meatPie.Cook();
+           // Console.ReadLine();
+
+            // Готовим яблочный пирог.
+            Console.WriteLine(applePie);
+            applePie.Cook();
             Console.ReadLine();
         }
     }

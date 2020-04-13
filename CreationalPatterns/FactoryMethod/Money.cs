@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Patterns.FactoryMethod
+namespace Patterns.CreationalPatterns.FactoryMethod
 {
     /// <summary>
     /// Базовый класс для любой валюты.
