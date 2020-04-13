@@ -9,7 +9,7 @@ namespace Patterns.CreationalPatterns.FactoryMethod
 
     /// <summary>
     /// Concrete product - panel
-    /// </summary>   
+    /// </summary>
     public class PanelHouse : House
     {
         public PanelHouse()
@@ -20,7 +20,7 @@ namespace Patterns.CreationalPatterns.FactoryMethod
 
     /// <summary>
     /// Concrete product - wood
-    /// </summary>    
+    /// </summary>
     public class WoodHouse : House
     {
         public WoodHouse()
@@ -55,7 +55,7 @@ namespace Patterns.CreationalPatterns.FactoryMethod
         /// <summary>
         /// Factory method - Create
         /// </summary>
-        /// <returns></returns>        
+        /// <returns></returns>
         abstract public House Create();
     }
 
@@ -66,7 +66,6 @@ namespace Patterns.CreationalPatterns.FactoryMethod
     {
         public DeveloperPanel(string name) : base(name)
         {
-
         }
 
         public override House Create()
@@ -82,7 +81,6 @@ namespace Patterns.CreationalPatterns.FactoryMethod
     {
         public DeveloperWood(string name) : base(name)
         {
-
         }
 
         public override House Create()
@@ -98,7 +96,6 @@ namespace Patterns.CreationalPatterns.FactoryMethod
     {
         public DeveloperBrick(string name) : base(name)
         {
-
         }
 
         public override House Create()

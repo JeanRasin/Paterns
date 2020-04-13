@@ -6,11 +6,11 @@ using System.Text;
 
 namespace Patterns
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            // ------------------- Develop 
+            // ------------------- Develop
             Console.WriteLine("------------------- Develop");
 
             Developer dev1 = new DeveloperPanel("ООО ПанельСтрой");
@@ -35,7 +35,6 @@ namespace Patterns
             {
                 dev.Create();
             }
-
 
             // ------------------- Money
             Console.WriteLine("------------------- Money");
@@ -89,7 +88,7 @@ namespace Patterns
             // Готовим мясной пирог.
             Console.WriteLine(meatPie);
             meatPie.Cook();
-           // Console.ReadLine();
+            // Console.ReadLine();
 
             // Готовим яблочный пирог.
             Console.WriteLine(applePie);

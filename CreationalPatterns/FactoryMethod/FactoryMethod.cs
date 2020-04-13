@@ -5,7 +5,6 @@
  * https://refactoring.guru/ru/design-patterns/factory-method/csharp/example
  */
 
-
 namespace Patterns.CreationalPatterns.FactoryMethod
 {
     public abstract class Product
@@ -18,7 +17,6 @@ namespace Patterns.CreationalPatterns.FactoryMethod
 
     public class CurrentProductB : Product
     {
-
     }
 
     public abstract class Creator

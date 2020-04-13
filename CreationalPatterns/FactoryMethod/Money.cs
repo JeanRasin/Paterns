@@ -43,7 +43,7 @@ namespace Patterns.CreationalPatterns.FactoryMethod
         }
 
         /// <summary>
-        /// Приведение объекта к строке. 
+        /// Приведение объекта к строке.
         /// </summary>
         /// <returns> Название валюты. </returns>
         public override string ToString()
