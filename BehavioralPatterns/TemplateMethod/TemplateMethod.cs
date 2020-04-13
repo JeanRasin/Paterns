@@ -1,6 +1,7 @@
 ﻿/*
  * https://bool.dev/blog/detail/pattern--shablonnyy-metod-template-method
  * https://shwanoff.ru/templatemethod
+ * https://metanit.com/sharp/patterns/3.4.php
  */
 
 using System;

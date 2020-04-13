@@ -93,7 +93,15 @@ namespace Patterns
             // Готовим яблочный пирог.
             Console.WriteLine(applePie);
             applePie.Cook();
-            Console.ReadLine();
+            // Console.ReadLine();
+
+            School school = new School();
+            University university = new University();
+            College college = new College();
+
+            school.Learn();
+            university.Learn();
+            college.Learn();
         }
     }
 }
