@@ -1,4 +1,5 @@
 ﻿using Patterns.BehavioralPatterns.Iterator;
+using Patterns.BehavioralPatterns.State;
 using Patterns.BehavioralPatterns.TemplateMethod;
 using Patterns.CreationalPatterns.FactoryMethod;
 using Patterns.StructuralPatterns.Adapter;
@@ -178,6 +179,19 @@ namespace Patterns
             {
                 Console.WriteLine(element);
             }
+
+            // State
+            // ------------------- State
+            Console.WriteLine("------------------- State");
+
+            var context = new Context(new StateA());
+            context.Request(); // Переход в состояние StateB
+            context.Request();  // Переход в состояние StateA
+
+            var water = new Water(new LiquidWaterState());
+            water.Heat();
+            water.Frost();
+            water.Frost();
         }
     }
 }
