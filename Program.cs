@@ -1,4 +1,5 @@
-﻿using Patterns.BehavioralPatterns.TemplateMethod;
+﻿using Patterns.BehavioralPatterns.Iterator;
+using Patterns.BehavioralPatterns.TemplateMethod;
 using Patterns.CreationalPatterns.FactoryMethod;
 using Patterns.StructuralPatterns.Adapter;
 using System;
@@ -129,6 +130,54 @@ namespace Patterns
 
             // Продолжаем путь по пескам пустыни
             driver.Travel(camelToTransportAdapter);
+
+            // Iterator
+            // ------------------- Iterator
+            Console.WriteLine("------------------- Iterator");
+
+            Aggregate aggregate = new ConcreteAggregate();
+
+            Iterator iterator = aggregate.CreateIterator();
+
+            /*
+            object item = iterator.First();
+            while(!iterator.IsDone())
+            {
+                item = iterator.Next();
+            }
+            */
+
+            Console.WriteLine("------------------- Iterator Books");
+
+            var library = new Library();
+            var reader = new Reader();
+            reader.SeeBooks(library);
+
+            Console.WriteLine("------------------- Iterator Words");
+
+            // Клиентский код может знать или не знать о Конкретном Итераторе
+            // или классах Коллекций, в зависимости от уровня косвенности,
+            // который вы хотите сохранить в своей программе.
+            var collection = new BehavioralPatterns.Iterator.Words.WordsCollection();
+            collection.AddItem("First");
+            collection.AddItem("Second");
+            collection.AddItem("Third");
+
+            Console.WriteLine("Straight traversal:");
+
+            foreach (var element in collection)
+            {
+                Console.WriteLine(element);
+            }
+
+            Console.WriteLine("\nReverse traversal:");
+
+            collection.ReverseDirection();
+
+            foreach (var element in collection)
+            {
+                Console.WriteLine(element);
+            }
         }
     }
 }
