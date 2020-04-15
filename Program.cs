@@ -1,4 +1,5 @@
 ﻿using Patterns.BehavioralPatterns.Iterator;
+using Patterns.BehavioralPatterns.Prototype;
 using Patterns.BehavioralPatterns.State;
 using Patterns.BehavioralPatterns.TemplateMethod;
 using Patterns.CreationalPatterns.FactoryMethod;
@@ -192,6 +193,44 @@ namespace Patterns
             water.Heat();
             water.Frost();
             water.Frost();
+
+            // Prototype
+            // ------------------- Prototype
+            Console.WriteLine("------------------- Prototype");
+
+            Prototype prototype = new ConcretePrototype1(5);
+            Prototype clone = prototype.Clone();
+            prototype = new ConcretePrototype2(7);
+            clone = prototype.Clone();
+
+            // --- Circle
+            IFigure rectangle = new Rectangle(100, 300);
+            IFigure rectangleClone = rectangle.Clone();
+            IFigure rectangleMemberwiseClone = rectangle.CloneMemberwise();
+            rectangleMemberwiseClone.GetInfo();
+            rectangle.GetInfo();
+            rectangleClone.GetInfo();
+
+            IFigure circle = new Circle(152);
+            IFigure circleClone = circle.Clone();
+            circle.GetInfo();
+            circleClone.GetInfo();
+
+            // Shallow Copy
+            Console.WriteLine("--- Shallow Copy");
+            var figure = new Circle2(30, 50, 60);
+            var cloneFigure = figure.CloneMemberwise() as Circle2;
+            figure.Point.X = 100;
+            figure.GetInfo();
+            cloneFigure.GetInfo();
+
+            // Deep Copy
+            Console.WriteLine("--- Deep Copy");
+            var figure2 = new Circle2(30, 50, 60);
+            var cloneFigure2 = figure2.DeepCopy() as Circle2;
+            figure2.Point.X = 100;
+            figure2.GetInfo();
+            cloneFigure2.GetInfo();
         }
     }
 }
