@@ -231,6 +231,21 @@ namespace Patterns
             figure2.Point.X = 100;
             figure2.GetInfo();
             cloneFigure2.GetInfo();
+
+            // Proxy
+            // ------------------- Proxy
+            Console.WriteLine("------------------- Proxy");
+
+            var client = new BehavioralPatterns.Proxy.RealProxy.Client();
+
+            Console.WriteLine("Client: Executing the client code with a real subject:");
+            var realSubject = new BehavioralPatterns.Proxy.RealProxy.RealSubject();
+            client.ClientCode(realSubject);
+
+            Console.WriteLine();
+            Console.WriteLine("Client: Executing the same client code with a proxy:");
+            var proxy = new BehavioralPatterns.Proxy.RealProxy.Proxy(realSubject);
+            client.ClientCode(proxy);
         }
     }
 }
